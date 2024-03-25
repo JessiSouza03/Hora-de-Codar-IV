@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Exercício 1 - JS</title>
+</head>
+
+<body>
+    <script>
+        // 1 - Crie um programa onde o usuário possa cadastrar estudantes sem limites, e, em seguida, Se o usuário digitar "PARE" o programa deve exibir a quantidade de estudantes cadastrados e a lista com cada um deles. 
+        var soma = 0;
+        var estudantes = [];
+
+        var input = prompt("Cadastre o Estudante (digite 'PARE' para finalizar)");
+
+        while (input !== "PARE") {
+            estudantes.push(input);
+            soma++;
+            input = prompt("Cadastre o Estudante (digite 'PARE' para finalizar)");
+        }
+        
+        var listaEstudantes = estudantes.join(", ");
+
+        alert("O número de estudantes cadastrados é " + soma + ".\n" +
+            "Os nomes dos estudantes são: " + listaEstudantes);
+    </script>
+</body>
+
+</html>
